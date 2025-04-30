@@ -1,15 +1,13 @@
-# 🎭 AI动漫人设系统 - AI Anime Character Persona System
-
-Author: Shijie Zheng  
-Contact: [z1597006376@gmail.com](mailto:z1597006376@gmail.com)
-
----
+# 🎭 AI动漫角色人设生成器 - AI Anime Character Creator Agent
 
 ## Online-Use
 
-Demo：Ganyu from Genshin Impact - https://udify.app/chat/iP0yw8HbPFeD6XzL 
+AI Anime Character Creator Agent部分的代码不开源，这里只开源项目思路和执行方案
 
-专业版待定，有空做
+以下是一个AI Anime Character Creator Agent做出来的动漫角色Demo：
+Ganyu from Genshin Impact - https://udify.app/chat/iP0yw8HbPFeD6XzL 
+
+专业版及完整开源待定，有空做
 
 ## 💡 项目简介
 
@@ -23,25 +21,38 @@ Demo：Ganyu from Genshin Impact - https://udify.app/chat/iP0yw8HbPFeD6XzL
 - **Dify**：支持角色化配置、Agent对话、多模态插件、工作流自动化
 
 ### 🧠 大模型选用
-- **DeepSeek-V3**：中文能力强，推理能力好，适合动漫/二次元语境
+- **DeepSeek-V3**：中文能力强，推理能力好，适合动漫/二次元语境，初次之外国内适配度高
 
 ### 🧩 技术模块
 
 #### Prompt 工程
+
+项目推荐：https://github.com/PlexPt/awesome-chatgpt-prompts-zh
+工具网站：https://chat.aimakex.com/login
+
 - System Prompt 模板
 - Few-shot 示例构建
 - 多场景Prompt切换（闲聊、剧情、情绪）
 
 #### 知识库（RAG）
+
+Dify内置
+
 - 人设库：姓名、背景、身份
 - 台词库：常用语句、口头禅
 - 世界观库：地点、组织、历史事件等背景资料
 
 #### 微调（Fine-tuning）
+
+Dify支持本地模型，开源自己微调好模型通过PEFT接入Dify
+
 - 自建世界观数据集：角色问答 / 场景剧本 / 二创内容
 - 用于强化角色行为一致性、个性稳定、多角色交互
 
 #### 多模态拓展
+
+Dify内置适配语音接口，自己调好Minimax混音，然后通过API接入Dify
+
 - **语音**：通过 MiniMax 混音接口或其它工具实现猫娘音、萝莉音、少年音
 - **图像 & 视频**：使用 ComfyUI 或其他在线工具生成角色立绘、动态表现
 
@@ -54,6 +65,9 @@ Demo：Ganyu from Genshin Impact - https://udify.app/chat/iP0yw8HbPFeD6XzL
 - **有灵魂**：性格明确、语言风格鲜明
 - **有背景**：可深入交流自身设定、历史与世界观
 - **有互动性**：具备情绪反应与多轮话题延续能力
+
+可以参考我发表在SCI的论文，专门解决以上三个问题，论文代码不开源，但是提供了足够的相关知识和思路：
+MemoryRepository for AI NPC:https://ieeexplore.ieee.org/document/10508558
 
 ---
 
@@ -110,6 +124,9 @@ Demo：Ganyu from Genshin Impact - https://udify.app/chat/iP0yw8HbPFeD6XzL
 ## 🏋️‍♀️ 训练数据与调优流程
 
 ### 🔹 数据来源
+
+类型是以下这些，台词主要是用八爪鱼去b站和各大二次元平台爬，还有就是萌娘百科
+
 - 人设定义表格
 - 场景式角色剧本
 - 粉丝向二创作品
@@ -151,3 +168,11 @@ Demo：Ganyu from Genshin Impact - https://udify.app/chat/iP0yw8HbPFeD6XzL
 ## 📜 License
 
 MIT License — 欢迎二次开发与参考。如果你喜欢这个项目，请记得 Star ⭐！
+
+# Contact me
+
+Author: Shijie Zheng  
+Contact: [z1597006376@gmail.com](mailto:z1597006376@gmail.com)
+
+有用可以点个Star，需要商业化定制可以联系作者邮箱
+作者承接AI和自动化相关的互联网、游戏、AI工具领域的解决方案和项目。
