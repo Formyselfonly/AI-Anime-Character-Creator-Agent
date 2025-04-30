@@ -7,7 +7,9 @@ Contact: [z1597006376@gmail.com](mailto:z1597006376@gmail.com)
 
 ## Online-Use
 
-待定，有空做
+Demo：Ganyu from Genshin Impact - https://udify.app/chat/iP0yw8HbPFeD6XzL 
+
+专业版待定，有空做
 
 ## 💡 项目简介
 
